@@ -2,8 +2,8 @@
     import Header from "./header.svelte";
     import Footer from "./footer.svelte";
     import Main from "./main.svelte";
-  import Card from "./card.svelte";
-  import Box from "./box.svelte";
+    import Card from "./card.svelte";
+    import Box from "./box.svelte";
 </script>
 
 메인페이지 
