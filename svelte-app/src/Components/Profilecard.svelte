@@ -3,7 +3,7 @@
 <script>
     import ProfileImg from 'svelte-material-icons/AccountCircle.svelte'
     let name =  'Mei';
-    let email = 'mei@mindshift.co.kr';
+    let email = 'mei@inha.ac.kr';
  
 </script>
 

@@ -1,6 +1,6 @@
 <script>
 	import Mainpage from "./mainpage.svelte";
-	import Productpage from "./productpage.svelte";
+	import Productpage from "./examples/productpage.svelte";
 </script>
 
 <main>
