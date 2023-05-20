@@ -7,6 +7,6 @@
 
 .svelte-kit/
 package
-node_modules
+*.zip
 
 # End of https://www.toptal.com/developers/gitignore/api/svelte
