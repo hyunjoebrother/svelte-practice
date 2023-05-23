@@ -12,16 +12,16 @@
     .button-container {
         width: 100px;
         height: 36px;
-        color: rgb(253, 137, 157);
+        color: #FFCD40;
         background-color: #fff;
-        border: 1.2px solid rgb(253, 137, 157);
+        border: 1.2px solid #FFCD40;
         border-radius: 20px;
         margin: 12px;
     }
 
     .button-container:hover {
         color: #fff;
-        background-color: rgb(253, 137, 157);
+        background-color: #FFCD40;
     }
 
     .item-container {
