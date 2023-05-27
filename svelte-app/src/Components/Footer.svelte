@@ -2,7 +2,6 @@
     let logoImg = '/logo.png'
 </script>
 
-
 <footer class="footer-container">
     <div class="item-container">    
             <ul class="footer-left">
