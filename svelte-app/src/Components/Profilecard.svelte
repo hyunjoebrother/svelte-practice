@@ -2,8 +2,8 @@
 
 <script>
     import ProfileImg from 'svelte-material-icons/AccountCircle.svelte'
-    let name =  'Mei';
-    let email = 'mei@inha.ac.kr';
+    export let name;
+    export let email;
  
 </script>
 

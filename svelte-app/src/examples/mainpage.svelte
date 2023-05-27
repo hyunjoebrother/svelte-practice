@@ -1,6 +1,6 @@
 <script>
-    import Header from "./header.svelte";
-    import Footer from "./footer.svelte";
+    import Header from "../Components/Header.svelte";
+    import Footer from "../Components/Footer.svelte";
     import Main from "./main.svelte";
     import Card from "./card.svelte";
     import Box from "./box.svelte";
@@ -24,14 +24,6 @@
     type="active"
     badge="뱃지2"
 />
-<Box 
-    label="박스3"
-    count="33"
-    type="deaths"
-    badge="뱃지3"
-/>
-<br />
-위에 박스
 <br />
 
 <Header />

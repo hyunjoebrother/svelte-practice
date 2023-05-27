@@ -2,7 +2,25 @@
     let logoImg = '/secret.png'
     import Alarm from 'svelte-material-icons/BellOutline.svelte'
     import Profilecard from './Profilecard.svelte';
-  import Button from './Button.svelte';
+    import Button from './Button.svelte';
+
+    import { onMount } from 'svelte';
+    export let name;
+    export let email;
+
+    onMount(async () => {
+        try {
+            // API에 요청
+            const response = await fetch("http://localhost:3000/member");
+            const data = await response.json();
+
+            // Extract name and email from the JSON response
+            name = data.name;
+            email = data.email;
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    });
 </script>
 
 
@@ -20,7 +38,7 @@
             <Alarm width={28} height={28}/>
         </div>
         <div class="profile-card">
-            <Profilecard name="Mei" email="mei@inha.ac.kr" />
+            <Profilecard name={name} email={email} />
         </div>
     </div> 
 </header>

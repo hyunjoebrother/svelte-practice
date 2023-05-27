@@ -1,7 +1,7 @@
 <script>
-    import Header from "../header.svelte";
-    import Product from "../product.svelte";
-    import Footer from "../footer.svelte";
+    import Header from "../Components/Header.svelte";
+    import Product from "./product.svelte";
+    import Footer from "../Components/Footer.svelte";
 </script>
 
 프러덕트 페이지
