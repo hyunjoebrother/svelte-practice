@@ -1,30 +1,20 @@
 <script>
-	import Mainpage from "./examples/mainpage.svelte";
-	import Productpage from "./examples/productpage.svelte";
+	import {Link, Route, Router} from "svelte-routing";
+	import MainPage from "./routes/MainPage.svelte";
+  	import HomePage from "./routes/HomePage.svelte";
+	import Footer from "./Components/Footer.svelte";
+
+	export let url="";
 </script>
 
-<main>
-	<Mainpage />
-	<hr /> <!-- 수평선 -->
-	<Productpage />	
-</main>
+<Router {url}>
+	<nav>
+		<Link to="/">메인</Link>
+		<Link to="/home">홈</Link>
+	</nav>
 
+	<Route path="/" component={MainPage} />
+	<Route path="/home" component={HomePage} />
+</Router>
 
-<style>
-	main {
-		padding: 85px 3% 0;
-		position: relative;
-		margin: 0 auto;
-		min-height: calc(100vh-85px);
-	}
-	@media (max-width: 992px) {
-		main {
-			padding: 85px 2% 0;
-		}
-	}
-	@media (min-width: 560px) {
-		main {
-			padding: 85px 1% 0;
-		}
-	}
-</style>
+<Footer />
