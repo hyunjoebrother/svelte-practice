@@ -1,13 +1,17 @@
 <script>
-	import Productpage from "../examples/productpage.svelte";
+	import Footer from '../components/Footer.svelte';
+    import Header from '../components/Header.svelte'
+    import Profilecard from '../components/Profilecard.svelte';
 </script>
 
 
-홈페이지입니당
-
 <main>
-	<hr /> <!-- 수평선 -->
-	<Productpage />	
+    <Header />
+    <Profilecard />
+    <Profilecard />
+    <Profilecard />
+    <Profilecard />
+    <Footer />
 </main>
 
 

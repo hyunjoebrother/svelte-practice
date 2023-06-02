@@ -6,13 +6,13 @@
 <nav class="nav-container">
     <ul>
         <li>
-            <a href="#">메인페이지</a>
+            메인페이지
         </li>
         <li>
-            <a href="#">응애응애</a>
+            응애응애
         </li>
         <li>
-            <a href="#">응애</a>
+            응애
         </li>
     </ul>
 </nav>
@@ -37,7 +37,7 @@
         padding: 20px 0 20px 20px;
     }
 
-    nav ul li a::before {
+    nav ul li::before {
         content: '';
         position: absolute;
         top: 0;
@@ -50,13 +50,13 @@
         transition: all 300ms ease-in-out;
     }
 
-    nav ul li a:hover {
+    nav ul li:hover {
         color: #fff;
         font-weight: 500;
         text-decoration: none;
     }
 
-    nav ul li a:hover::before {
+    nav ul li:hover::before {
         width: 95%
     }
 </style>

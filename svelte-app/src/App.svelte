@@ -2,11 +2,14 @@
 	import {Link, Route, Router} from "svelte-routing";
 	import MainPage from "./routes/MainPage.svelte";
   	import HomePage from "./routes/HomePage.svelte";
-	import Footer from "./Components/Footer.svelte";
-  import LoginPage from "./routes/LoginPage.svelte";
+	import Footer from "./components/Footer.svelte";
+	import LoginPage from "./routes/LoginPage.svelte";
 
 	export let url="";
 </script>
+
+
+하이
 
 <Router {url}>
 	<nav>

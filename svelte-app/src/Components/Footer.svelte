@@ -21,21 +21,21 @@
                     
                     <ul class="support">
                         <h3>Support</h3>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">고객센터</a></li>
+                        <li>FAQ</li>
+                        <li>고객센터</li>
                     </ul>
                     
                     
                     <ul class="resources">
                         <h3>Resources</h3>
-                        <li><a href="#">호롤로로안내</a></li>
+                        <li>호롤로로안내</li>
                     </ul>
 
                     
                     <ul class="legal">
                         <h3>Legal</h3>
-                        <li><a href="#">서비스이용약관</a></li>
-                        <li><a href="#">개인정보처리방침</a></li>
+                        <li>서비스이용약관</li>
+                        <li>개인정보처리방침</li>
                     </ul>
                 </li>
             </ul>
@@ -65,7 +65,7 @@
         align-items: center; /* 수직 정렬 */
     }
 
-    .footer ul {
+    footer ul {
         list-style: none;
     }
 
@@ -104,6 +104,11 @@
 
     .footer-right li {
         list-style: none;
+        text-decoration: none;
+        color: #000;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 12px;
     }
 
     .footer-right li ul {
@@ -118,14 +123,6 @@
         font-weight: 600;
         line-height: 20px;
         margin-top: 12px;
-    }
-
-    .footer-right a {
-        text-decoration: none;
-        color: #000;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 12px;
     }
 
     .footer-logo {
