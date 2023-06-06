@@ -1,10 +1,24 @@
 const express = require('express')
 const app = express()
 
+
+app.use(express.json())
+
+var cookies = require('cookie-parser');
+app.use(cookies())
+
+const {config} = require('dotenv')
+config()
+
+const { isAuthenticated } = require('./utils/jwt')
+
 const cors = require('cors')  
 app.use(cors('http://localhost:8080'))
 
-app.listen(3000, () => {
+
+const port = process.env.PORT;
+
+app.listen(port, () => {
     console.log("\r\ntry http://localhost:3000 on your browser");
 });
 
@@ -20,3 +34,17 @@ app.get("/member", (req, res) => {
   };
   res.json(data);
 })
+
+
+// JWT Login
+
+const authRouter = require('./routes/auth')
+app.use('/auth', authRouter);
+
+app.get('/restricted', isAuthenticated, (reqm, res) => {
+  res.status(200).send({message: 'This is Restricted Zone'})
+})
+
+app.all('*', (req, res) => [
+  res.status(400).send({message: 'Invalid Route'})
+])
