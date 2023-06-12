@@ -37,7 +37,7 @@
       <div class="login-option-section">
         <ul>
             <li>
-              <a href="/setting/resetpwd">비밀번호 재설정</a>
+              <a href="/login/step2">비밀번호 재설정</a>
             </li>
             <li>
                 <a href="/join">회원가입</a>
