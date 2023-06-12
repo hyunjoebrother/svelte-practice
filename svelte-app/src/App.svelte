@@ -3,11 +3,13 @@
 	import MainPage from "./routes/MainPage.svelte";
   	import HomePage from "./routes/HomePage.svelte";
 	import Footer from "./components/Footer.svelte";
-	import LoginPage from "./routes/LoginPage.svelte";
   import JoinStep1 from "./routes/JoinPage/JoinStep1.svelte";
   import JoinStep2 from "./routes/JoinPage/JoinStep2.svelte";
   import JoinStep3 from "./routes/JoinPage/JoinStep3.svelte";
   import JoinFinish from "./routes/JoinPage/JoinFinish.svelte";
+  import LoginStep1 from "./routes/LoginPage/LoginStep1.svelte";
+  import LoginStep2 from "./routes/LoginPage/LoginStep2.svelte";
+  import LoginStep3 from "./routes/LoginPage/LoginStep3.svelte";
 
 	export let url="";
 </script>
@@ -24,7 +26,9 @@
 
 	<Route path="/" component={MainPage} />
 	<Route path="/home" component={HomePage} />
-	<Route path="/login" component={LoginPage}/>
+	<Route path="/login" component={LoginStep1}/>
+	<Route path="/login/step2" component={LoginStep2} />
+	<Route path="/login/step3" component={LoginStep3} />
 
 	<Route path="/join" component={JoinStep1} />
 	<Route path="/join/step2" component={JoinStep2} />
