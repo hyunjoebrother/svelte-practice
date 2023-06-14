@@ -10,6 +10,12 @@
   import LoginStep1 from "./routes/LoginPage/LoginStep1.svelte";
   import LoginStep2 from "./routes/LoginPage/LoginStep2.svelte";
   import LoginStep3 from "./routes/LoginPage/LoginStep3.svelte";
+  import SelectDeposit from "./routes/SelectDeposit.svelte";
+  import WithdrawalStep1 from "./routes/WithdrawalPage/WithdrawalStep1.svelte";
+  import WithdrawalStep2_1 from "./routes/WithdrawalPage/WithdrawalStep2-1.svelte";
+  import WithdrawalStep3_1 from "./routes/WithdrawalPage/WithdrawalStep3-1.svelte";
+  import { component_subscribe } from "svelte/internal";
+  import WithdrawalStep2_2 from "./routes/WithdrawalPage/WithdrawalStep2-2.svelte";
 
 	export let url="";
 </script>
@@ -34,6 +40,13 @@
 	<Route path="/join/step2" component={JoinStep2} />
 	<Route path="/join/step3" component={JoinStep3} />
 	<Route path="/join/finish" component={JoinFinish} />
+
+	<Route path="/deposit" component={SelectDeposit} />
+
+	<Route path="/withdrawal" component={WithdrawalStep1} />
+	<Route path="/withdrawal/step2-1" component={WithdrawalStep2_1} />
+	<Route path="/withdrawal/step2-2" component={WithdrawalStep2_2} />
+	<Route path="/withdrawal/step3-1" component={WithdrawalStep3_1} />
 </Router>
 
 <Footer />
