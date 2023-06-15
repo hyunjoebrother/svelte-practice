@@ -16,6 +16,9 @@
   import WithdrawalStep3_1 from "./routes/WithdrawalPage/WithdrawalStep3-1.svelte";
   import { component_subscribe } from "svelte/internal";
   import WithdrawalStep2_2 from "./routes/WithdrawalPage/WithdrawalStep2-2.svelte";
+  import WithdrawalStep3_2_1 from "./routes/WithdrawalPage/WithdrawalStep3-2-1.svelte";
+  import WithdrawalStep3_2_2 from "./routes/WithdrawalPage/WithdrawalStep3-2-2.svelte";
+  import WithdrawalStep3_3_1 from "./routes/WithdrawalPage/WithdrawalStep3-3-1.svelte";
 
 	export let url="";
 </script>
@@ -47,6 +50,10 @@
 	<Route path="/withdrawal/step2-1" component={WithdrawalStep2_1} />
 	<Route path="/withdrawal/step2-2" component={WithdrawalStep2_2} />
 	<Route path="/withdrawal/step3-1" component={WithdrawalStep3_1} />
+	<Route path="/withdrawal/step3-2-1" component={WithdrawalStep3_2_1} />
+	<Route path="/withdrawal/step3-2-2" component={WithdrawalStep3_2_2} />
+	<Route path="/withdrawal/step3-3-1" component={WithdrawalStep3_3_1} />
+	
 </Router>
 
 <Footer />
