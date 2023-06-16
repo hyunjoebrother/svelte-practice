@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "chart.js": "^4.3.0"
+    "chart.js": "^4.3.0",
+    "svelte-material-icons": "^3.0.4"
   }
 }
