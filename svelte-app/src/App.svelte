@@ -20,6 +20,7 @@
   import WithdrawalStep3_2_2 from "./routes/WithdrawalPage/WithdrawalStep3-2-2.svelte";
   import WithdrawalStep3_3_1 from "./routes/WithdrawalPage/WithdrawalStep3-3-1.svelte";
   import Transaction from "./routes/TransactionPage/Transaction.svelte";
+  import CertifyTransactionPage from "./routes/CertificationPage/CertifyTransactionPage.svelte";
 
 	export let url="";
 </script>
@@ -56,6 +57,7 @@
 	<Route path="/withdrawal/step3-3-1" component={WithdrawalStep3_3_1} />
 	
 	<Route path="/transaction" component={Transaction} />
+	<Route path="/certification" component={CertifyTransactionPage} />
 </Router>
 
 <Footer />
