@@ -16,6 +16,11 @@ const cors = require('cors')
 app.use(cors('http://localhost:8080'))
 
 
+// Swagger와 Express server 연결
+const {swaggerUi, specs} = require("./swagger/swagger")
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs, {explorer: true}))
+
+
 const port = process.env.PORT;
 
 app.listen(port, () => {
