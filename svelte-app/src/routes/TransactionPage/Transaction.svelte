@@ -3,20 +3,10 @@
     import TransactionItem from "./TransactionItem.svelte";
     import TransactionRow from "./TransactionRow.svelte";
   import Pagination from "../Pagination.svelte";
+  import transactionData from "../../stores/transactionData"
   
-    let transactionCount = 0;
-  
-    const countComponents = () => {
-      const components = document.querySelectorAll('.transaction-item');
-      transactionCount = components.length;
-  
-  
-    onMount(() => {
-      countComponents()
-    });
-    };
-  
-  
+  let cardItems = transactionData.length; // pagination을 위해 데이터 갯수 컴포넌트별로 전달
+  let items = [];
   </script>
   
   <div class="page-container">
@@ -74,24 +64,40 @@
         </div>
         <div class="bottom-section">
           <div class="value-section">
-            <p class="value-count">총 {transactionCount}개</p>
+            <p class="value-count">총 {cardItems}개</p>
             <button class="value-download">다운로드</button>
           </div>
-          <div class="list-section">
-            <TransactionRow />
-            <TransactionItem class="transaction-item"/>
-            <TransactionItem class="transaction-item"/>
-            <TransactionItem class="transaction-item"/>
-            <TransactionItem class="transaction-item"/>
-            <TransactionItem class="transaction-item"/>
-            <TransactionItem class="transaction-item"/>
-            <TransactionItem class="transaction-item"/>
-            <TransactionItem class="transaction-item"/>
+
+        <div class="list-section">
+          <TransactionRow />
+          {#if cardItems === 0}
+          <div class="empty-section">
+            검색 결과가 없습니다.
           </div>
+          {/if}
+          {#each items as { item, currentDate, currentType, currentName, currentAmount, currentState, currentTxid, currentMemo }}
+            <TransactionItem
+              {item}
+              {currentDate}
+              {currentType}
+              {currentName}
+              {currentAmount}
+              {currentState}
+              {currentTxid}
+              {currentMemo}
+            />
+          {/each}
         </div>
-        <div class="pagination">
-          <Pagination />
-        </div>
+      </div>
+      {#if cardItems !== 0}
+      <div class="pagination">
+        <Pagination
+          bind:items
+          cardLength={transactionData.length}
+          cardData={transactionData}
+        />
+      </div>
+      {/if}
       </div>
     </section>
   </div>
